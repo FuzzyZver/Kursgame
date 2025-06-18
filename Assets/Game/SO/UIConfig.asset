@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81570a8d7f927844583c6289cb26b118, type: 3}
-  m_Name: TapConfig
+  m_Script: {fileID: 11500000, guid: a176ab7630b84ae43957b42c902dbb06, type: 3}
+  m_Name: UIConfig
   m_EditorClassIdentifier: 
-  PointsCount: 40
-  OneTapValue: 1
-  AutoTapValue: 1
-  BoostTimer: 5
+  NotifyView: {fileID: 2238877215860161201, guid: 728142773dd977c40b45228fe18ee9e5, type: 3}

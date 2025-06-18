@@ -11,12 +11,17 @@ public class TapSystem: Injects, IEcsRunSystem
     
     public void Run()
     {
-        if (!_boostStart)
+        foreach (int i in _boostEventFilter)
         {
-            foreach (int i in _boostEventFilter)
+            if (!_boostStart)
             {
                 Boosted();
             }
+            else
+            {
+                EcsWorld.NewEntity().Get<NotifyTextEvent>().text = ("Вы уже нажали на буст, подождите");
+            }
+
         }
         foreach (int i in _tapEventFilter)
         {
