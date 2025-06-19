@@ -2,5 +2,5 @@ using UnityEngine;
 
 public struct NotifyTextEvent
 {
-    public string text;
+    public string Text;
 }

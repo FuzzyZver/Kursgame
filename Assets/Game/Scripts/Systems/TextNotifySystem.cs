@@ -11,7 +11,7 @@ public class TextNotifySystem: Injects, IEcsRunSystem
         foreach(int i in _notifyTextEventFilter)
         {
             NotifyView notifyView = GameObject.Instantiate(GameConfig.UIConfig.NotifyView, UI.TextNotifySpawnPoint);
-            notifyView.SetText(_notifyTextEventFilter.Get1(i).text);
+            notifyView.SetText(_notifyTextEventFilter.Get1(i).Text);
         }
 
         foreach(int i in _tapEventFilter)

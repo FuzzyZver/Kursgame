@@ -19,13 +19,13 @@ public class TapSystem: Injects, IEcsRunSystem
             }
             else
             {
-                EcsWorld.NewEntity().Get<NotifyTextEvent>().text = ("Вы уже нажали на буст, подождите");
+                EcsWorld.NewEntity().Get<NotifyTextEvent>().Text = ("Вы уже нажали на буст, подождите");
             }
 
         }
         foreach (int i in _tapEventFilter)
         {
-            GameConfig.TapConfig.PointsCount += GameConfig.TapConfig.OneTapValue*_booster;
+            GameConfig.TapConfig.PointsCount += GameConfig.TapConfig.Skills[0].Value *_booster;
         }
     }
 
@@ -33,7 +33,7 @@ public class TapSystem: Injects, IEcsRunSystem
     {
         _boostStart = true;
         _booster++;
-        await Task.Delay(GameConfig.TapConfig.BoostTimer*1000);
+        await Task.Delay(GameConfig.TapConfig.Skills[2].Value*1000);
         _booster = 1;
         _boostStart= false;
     }

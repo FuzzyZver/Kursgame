@@ -16,9 +16,12 @@ public class ECSInclude : MonoBehaviour
         _ecsSystems
             .Add(new LevelInitSystem())
             .Add(new TapSystem())
-            .Add(new TextNotifySystem())
+            .Add(new BuySystem())
+
             .OneFrame<TapEvent>()
             .OneFrame<BoostEvent>()
+            .Add(new TextNotifySystem())
+            .OneFrame<BuySkillEvent>()
             .OneFrame<NotifyTextEvent>()
 
             .Inject(_gameConfig)
