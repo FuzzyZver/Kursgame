@@ -5,8 +5,7 @@ using TMPro;
 public class SettingsScreen : MonoBehaviour
 {
     [SerializeField] private GameConfig _gameConfig;
-    [SerializeField] private TextMeshProUGUI _textInput;
-    [SerializeField] private TextMeshProUGUI _textPlaceholder;
+    public DatabaseInteractActor DatabaseInteractActor;
     [SerializeField] private GameObject _buttonSoundOn;
     [SerializeField] private GameObject _buttonSoundOff;
 
@@ -23,11 +22,5 @@ public class SettingsScreen : MonoBehaviour
             _buttonSoundOff.SetActive(false);
             _buttonSoundOn.SetActive(true);
         }
-    }
-
-    public void UpdateNickName()
-    {
-        _gameConfig.CommonConfig.Nickname = _textInput.text;
-        _textPlaceholder.text = _textInput.text;
     }
 }

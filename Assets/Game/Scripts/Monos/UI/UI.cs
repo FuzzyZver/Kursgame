@@ -7,6 +7,7 @@ public class UI : MonoBehaviour
     public RectTransform TextNotifySpawnPoint;
     [Header("Screens")]
     public ShopScreen ShopScreen;
+    public SettingsScreen SettingsScreen;
 
     public void HideScreen(GameObject hideScreen)
     {

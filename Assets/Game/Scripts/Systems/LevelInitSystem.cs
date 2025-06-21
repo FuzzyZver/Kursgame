@@ -7,6 +7,7 @@ public class LevelInitSystem: Injects, IEcsInitSystem
     {
         UI.TapButtonActor.Init(EcsWorld);
         UI.BoosterActor.Init(EcsWorld);
+        UI.SettingsScreen.DatabaseInteractActor.Init(EcsWorld);
         
         foreach(BuySkillActor BuySkillActor in UI.ShopScreen.BuySkillActors)
         {

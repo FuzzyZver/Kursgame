@@ -18,8 +18,16 @@ public class ECSInclude : MonoBehaviour
             .Add(new TapSystem())
             .Add(new BuySystem())
 
+            .Add(new LoadPLayerSystem())
+            .Add(new UploadPlayerSystem())
+            .Add(new CleanDataSystem())
+
             .OneFrame<TapEvent>()
             .OneFrame<BoostEvent>()
+            .OneFrame<LoadPlayerEvent>()
+            .OneFrame<UploadPlayerEvent>()
+            .OneFrame<CleanDataEvent>()
+
             .Add(new TextNotifySystem())
             .OneFrame<BuySkillEvent>()
             .OneFrame<NotifyTextEvent>()

@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bedcf44a03a48ff45a59335e14adb24a, type: 3}
   m_Name: CommonConfig
   m_EditorClassIdentifier: 
+  DataBasePath: http://localhost/kursgame/get_player.php?nickname=
   IsSoundOn: 0
-  Nickname: 
+  Nickname: PlayerOne
+  HavePets: 010000
