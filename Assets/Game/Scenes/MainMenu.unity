@@ -659,6 +659,7 @@ MonoBehaviour:
   BoosterActor: {fileID: 340440371}
   TextNotifySpawnPoint: {fileID: 612048648}
   ShopScreen: {fileID: 1888841894}
+  SettingsScreen: {fileID: 1884823457}
 --- !u!1 &112210258
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,7 +742,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 112210261}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1884823458}
+        m_TargetAssemblyTypeName: DatabaseInteractActor, Assembly-CSharp
+        m_MethodName: LoadPlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &112210261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1560,9 +1573,9 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1884823457}
-        m_TargetAssemblyTypeName: SettingsScreen, Assembly-CSharp
-        m_MethodName: UpdateNickName
+      - m_Target: {fileID: 1884823458}
+        m_TargetAssemblyTypeName: DatabaseInteractActor, Assembly-CSharp
+        m_MethodName: SetNickname
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4588,9 +4601,9 @@ RectTransform:
   - {fileID: 822042401}
   m_Father: {fileID: 183346336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 130.63889, y: -152.9338}
   m_SizeDelta: {x: 256.4231, y: 45.691}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1068805767
@@ -5784,7 +5797,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1441246894}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1884823458}
+        m_TargetAssemblyTypeName: DatabaseInteractActor, Assembly-CSharp
+        m_MethodName: CleanData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1441246894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6634,7 +6659,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1696420494}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1884823458}
+        m_TargetAssemblyTypeName: DatabaseInteractActor, Assembly-CSharp
+        m_MethodName: UploadPlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1696420494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7101,13 +7138,14 @@ GameObject:
   - component: {fileID: 1884823456}
   - component: {fileID: 1884823455}
   - component: {fileID: 1884823457}
+  - component: {fileID: 1884823458}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1884823454
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7181,9 +7219,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameConfig: {fileID: 11400000, guid: ac652476ccf15c8479fb2e5297ee0328, type: 2}
-  DatabaseInteractActor: {fileID: 0}
+  DatabaseInteractActor: {fileID: 1884823458}
   _buttonSoundOn: {fileID: 924388230}
   _buttonSoundOff: {fileID: 822042400}
+--- !u!114 &1884823458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884823453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f04d423c50ed4141968cffd65177fe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nickname: 
+  _textPlaceholder: {fileID: 866921189}
 --- !u!1 &1888841890
 GameObject:
   m_ObjectHideFlags: 0
@@ -7686,9 +7738,9 @@ RectTransform:
   - {fileID: 112210259}
   m_Father: {fileID: 183346336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 130.63889, y: -39.88885}
   m_SizeDelta: {x: 262.6734, y: 79.7777}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2141111068

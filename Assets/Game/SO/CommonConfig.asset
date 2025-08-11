@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: CommonConfig
   m_EditorClassIdentifier: 
   DataBasePath: http://localhost/kursgame/get_player.php?nickname=
-  IsSoundOn: 0
-  Nickname: PlayerOne
-  HavePets: 010000
+  IsSoundOn: 1
+  Nickname: "FuzzyZVERRR\u200B"
+  HavePets: 010101
